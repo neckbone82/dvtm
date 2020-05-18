@@ -987,14 +987,14 @@ setup(void) {
 	resize_screen();
 
 	int *pipes[] = {&sigwinch_pipe[0], &sigchld_pipe[0]};
-	for (int i = 0; i < 2; ++i) {
+	for (unsigned int i = 0; i < LENGTH(pipes); ++i) {
 		int r = pipe(pipes[i]);
 		if (r < 0) {
 			perror("pipe()");
 			exit(EXIT_FAILURE);
 		}
 
-		for (int j = 0; j < 2; ++j) {
+		for (unsigned int j = 0; j < LENGTH(pipes); ++j) {
 			if (!set_blocking(pipes[i][j], false)) {
 				perror("fcntl()");
 				exit(EXIT_FAILURE);
