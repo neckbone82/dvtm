@@ -1844,7 +1844,7 @@ parse_args(int argc, char *argv[]) {
 				updatebarpos();
 				break;
 			case 'c': {
-				const char *fifo;
+				char *fifo;
 				cmdfifo.fd = open_or_create_fifo(argv[++arg], &cmdfifo.file);
 				if (!(fifo = realpath(argv[arg], NULL)))
 					error("%s\n", strerror(errno));
