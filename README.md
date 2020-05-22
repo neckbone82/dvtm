@@ -8,6 +8,9 @@ programs.
 
 ![abduco+dvtm demo](https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif)
 
+## Note about this fork
+This is a fork of the excellent [dvtm](https://github.com/martanne/dvtm) repo which is seemingly no longer maintained. Some of the bigger outstanding PRs have been merged for an updated release. I have plans for more extensive changes to the fork involving a floating layout (via libpanel) and config support which will be pushed in the near future, but I will try to make maintenance changes to the vanilla code as much as backward compatibility allows.
+
 ## News
 
 - [dvtm-0.15.1](https://github.com/mthowe/dvtm/archive/v0.15.1.tar.gz) released (22.05.2020)
