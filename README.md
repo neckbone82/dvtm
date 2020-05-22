@@ -10,6 +10,8 @@ programs.
 
 ## News
 
+- [dvtm-0.15.1](https://github.com/mthowe/dvtm/archive/v0.15.1.tar.gz) released (22.05.2020)
+  (sha1sum: f35a9055cb991cff5ffa0552d59cd5c72cb985f4)
 - [dvtm-0.15](http://www.brain-dump.org/projects/dvtm/dvtm-0.15.tar.gz)
   [released](http://lists.suckless.org/dev/1601/28095.html) (09.01.2016)
 - [dvtm-0.14](http://www.brain-dump.org/projects/dvtm/dvtm-0.14.tar.gz)
