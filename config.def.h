@@ -34,9 +34,9 @@ static Color colors[] = {
 #define BAR_BEGIN       '['
 #define BAR_END         ']'
 /* status bar (command line option -s) position */
-#define BAR_POS         BAR_TOP /* BAR_BOTTOM, BAR_OFF */
+#define BAR_POS         BAR_BOTTOM /* BAR_(TOP/BOTTOM/OFF) */
 /* whether status bar should be hidden if only one client exists */
-#define BAR_AUTOHIDE    true
+#define BAR_AUTOHIDE    false
 /* master width factor [0.1 .. 0.9] */
 #define MFACT 0.5
 /* number of clients in master area */
@@ -54,22 +54,22 @@ static Color colors[] = {
 /* curses attributes for not selected tags which with urgent windows */
 #define TAG_URGENT (COLOR(BLUE) | A_NORMAL | A_BLINK)
 
-const char tags[][8] = { "1", "2", "3", "4", "5" };
+const char tags[][8] = { "i", "ii", "iii", "iv", "v" };
 
-#include "tile.c"
+#include "fibonacci.c"
 #include "grid.c"
 #include "bstack.c"
 #include "fullscreen.c"
 
 /* by default the first layout entry is used */
 static Layout layouts[] = {
-	{ "[]=", tile },
+	{ "@", tile },
 	{ "+++", grid },
 	{ "TTT", bstack },
 	{ "[ ]", fullscreen },
 };
 
-#define MOD  CTRL('g')
+#define MOD  CTRL('')
 #define TAGKEYS(KEY,TAG) \
 	{ { MOD, 'v', KEY,     }, { view,           { tags[TAG] }               } }, \
 	{ { MOD, 't', KEY,     }, { tag,            { tags[TAG] }               } }, \
@@ -215,3 +215,4 @@ static Action actions[] = {
 static char const * const keytable[] = {
 	/* add your custom key escape sequences */
 };
+
